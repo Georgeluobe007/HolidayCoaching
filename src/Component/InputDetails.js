@@ -23,7 +23,7 @@ function InputDetails() {
    phone: Yup.string().min(10).max(10).required()
 })
  const onSubmit = (data) => {
-    Axios.post("http://localhost:3001/studentInfo/register", data).then((response) => {
+    Axios.post("http://localhost:3005/studentInfo/register", data).then((response) => {
           if(response.data.error){
             setAuthState({error:response.data.error})
           }else{
